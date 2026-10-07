@@ -1,0 +1,681 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b1120;
+    color: white;
+}
+
+
+/* Navigation Bar */
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: #0b1120;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #60a5fa;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #60a5fa;
+}
+
+
+/* Home Section */
+
+.home {
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 120px 40px 60px;
+}
+
+.home-content {
+    max-width: 650px;
+}
+
+.intro {
+    font-size: 20px;
+    color: #60a5fa;
+    margin-bottom: 10px;
+}
+
+.home-content h1 {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.home-content h2 {
+    font-size: 24px;
+    font-weight: normal;
+    color: #cbd5e1;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #94a3b8;
+    max-width: 600px;
+}
+
+
+/* Buttons */
+
+.home-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+
+    background: #2563eb;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 6px;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background: transparent;
+    border: 1px solid #60a5fa;
+}
+
+.secondary-btn:hover {
+    background: #2563eb;
+}
+
+
+/* Profile Image */
+
+.home-image img {
+    width: 280px;
+    height: 280px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 4px solid #60a5fa;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .home-content h1 {
+        font-size: 40px;
+    }
+
+    .home-content h2 {
+        font-size: 20px;
+    }
+
+    .home-buttons {
+        justify-content: center;
+    }
+
+    .home-image img {
+        width: 220px;
+        height: 220px;
+    }
+}
+/* About Section */
+
+.about {
+    min-height: 80vh;
+    max-width: 1200px;
+    margin: auto;
+    padding: 100px 40px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title p {
+    color: #60a5fa;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.about-image img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-content h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    color: #94a3b8;
+    line-height: 1.8;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+
+/* About Responsive Design */
+
+@media (max-width: 768px) {
+
+    .about {
+        padding: 80px 25px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 35px;
+    }
+
+    .about-image img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .about-content h3 {
+        font-size: 24px;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+}
+/* Skills Section */
+
+.skills {
+    min-height: 80vh;
+    max-width: 1200px;
+    margin: auto;
+    padding: 100px 40px;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.skill-card {
+    background: #111827;
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+    padding: 30px;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    border-color: #60a5fa;
+}
+
+.skill-card h3 {
+    color: #60a5fa;
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+
+.skill-card p {
+    color: #cbd5e1;
+    margin: 10px 0;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #1e293b;
+}
+
+
+/* Skills Responsive Design */
+
+@media (max-width: 900px) {
+
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .skills {
+        padding: 80px 25px;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+}
+/* Projects Section */
+
+.projects {
+    max-width: 1200px;
+    margin: auto;
+    padding: 100px 40px;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.project-card {
+    background: #111827;
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+    padding: 30px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: #60a5fa;
+}
+
+.project-content h3 {
+    font-size: 23px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.project-content p {
+    color: #94a3b8;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+.project-tech span {
+    background: #1e293b;
+    color: #93c5fd;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+.project-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.project-btn {
+    text-decoration: none;
+    color: white;
+    background: #2563eb;
+    padding: 9px 18px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.project-btn:hover {
+    background: #1d4ed8;
+}
+
+.live-btn {
+    background: transparent;
+    border: 1px solid #60a5fa;
+}
+
+.live-btn:hover {
+    background: #2563eb;
+}
+
+
+/* Projects Responsive Design */
+
+@media (max-width: 800px) {
+
+    .projects {
+        padding: 80px 25px;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
+/* Certifications Section */
+
+.certifications {
+    max-width: 1200px;
+    margin: auto;
+    padding: 100px 40px;
+}
+
+.certifications-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.certificate-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    background: #111827;
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+
+    padding: 25px;
+
+    transition: 0.3s;
+}
+
+.certificate-card:hover {
+    transform: translateY(-4px);
+    border-color: #60a5fa;
+}
+
+.certificate-icon {
+    min-width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+    color: white;
+
+    font-weight: bold;
+}
+
+.certificate-card h3 {
+    font-size: 18px;
+    margin-bottom: 7px;
+}
+
+.certificate-card p {
+    color: #94a3b8;
+    margin-bottom: 8px;
+}
+
+.certificate-card span {
+    color: #60a5fa;
+    font-size: 13px;
+}
+
+
+/* Certifications Responsive Design */
+
+@media (max-width: 800px) {
+
+    .certifications {
+        padding: 80px 25px;
+    }
+
+    .certifications-container {
+        grid-template-columns: 1fr;
+    }
+}
+/* Resume Section */
+
+.resume {
+    max-width: 1200px;
+    margin: auto;
+    padding: 100px 40px;
+}
+
+.resume-content {
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+
+    background: #111827;
+    border: 1px solid #1e293b;
+    border-radius: 15px;
+
+    padding: 50px 30px;
+}
+
+.resume-content h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.resume-content p {
+    color: #94a3b8;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+
+/* Contact Section */
+
+.contact {
+    max-width: 1200px;
+    margin: auto;
+    padding: 100px 40px;
+}
+
+.contact-container {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.contact-card {
+    background: #111827;
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    border-color: #60a5fa;
+}
+
+.contact-card h3 {
+    color: #60a5fa;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.contact-card p {
+    color: #94a3b8;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.contact-card a {
+    color: #93c5fd;
+    text-decoration: none;
+    word-break: break-word;
+}
+
+.contact-card a:hover {
+    color: white;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 25px;
+
+    border-top: 1px solid #1e293b;
+
+    color: #64748b;
+    font-size: 14px;
+}
+
+
+/* Resume & Contact Responsive */
+
+@media (max-width: 800px) {
+
+    .resume,
+    .contact {
+        padding: 80px 25px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .resume-content h3 {
+        font-size: 24px;
+    }
+}
+/* Section Animation */
+
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+section.show-section {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Mobile Menu Button */
+
+.menu-button {
+    display: none;
+
+    background: transparent;
+    border: none;
+
+    color: white;
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+/* Mobile Navigation */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 18px 25px;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+
+        position: absolute;
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        background: #0b1120;
+
+        flex-direction: column;
+        align-items: center;
+
+        gap: 20px;
+
+        padding: 25px 0;
+
+        border-top: 1px solid #1e293b;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
